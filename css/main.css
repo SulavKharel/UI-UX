@@ -1,0 +1,68 @@
+body {
+	margin: 0;
+	height: 100vh;
+	background: black;
+	overflow: hidden;
+}
+
+img {
+	width: 100%;
+	height: 15em;
+	object-fit: cover;
+}
+
+.bg {
+	height: 100vh;
+	background-image: url('../img/bg.jpg');
+	background-size: cover;
+}
+
+.container {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	display: grid;
+	place-content: center;
+}
+
+.content{
+	color: white;
+	text-align: center;
+}
+
+.text-reveal {
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	transition: all 1.5s;
+	transform: translateY(-3em);
+
+}
+
+.location-container {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+}
+
+.info{
+	background: whitesmoke;
+	padding: 3rem;
+	position: relative;
+	margin-top: -5em;
+}
+
+.title {
+	margin-top: -5.5em;
+	margin-bottom: 2.5em;
+	font-weight: bold;
+}
+
+.local {
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	opacity: 0;
+	transform: translateY(2em);
+}
+
+.content-inner {
+	padding-bottom: 3rem;
+}

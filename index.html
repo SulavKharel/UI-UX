@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UI/UX design</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+	<div class="bg"></div>
+
+	<div class="container">
+		<div class="content">
+			<div class="content-inner">
+				<h1 class="text-reveal">This is the Heading</h1>
+				<p class="text-reveal">This is the paragraph</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="location-container">
+		<div class="local">
+			<img src="img/1.jpg" alt="">
+			<div class="info">
+				<p class="title">Title</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, quisquam obcaecati iste et nemo officiis?</p>
+			</div>
+		</div>
+
+		<div class="local">
+			<img src="img/1.jpg" alt="">
+			<div class="info">
+				<p class="title">Title</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, quisquam obcaecati iste et nemo officiis?</p>
+			</div>
+		</div>
+
+		<div class="local">
+			<img src="img/1.jpg" alt="">
+			<div class="info">
+				<p class="title">Title</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, quisquam obcaecati iste et nemo officiis?</p>
+			</div>
+		</div>
+	</div>
+	
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+	let tl = gsap.timeline();
+
+	tl.from('.bg',{ 
+		scale:0.6, 
+		duration:2, 
+		opacity:0,
+		ease: Expo.EaseOut,
+		delay: 0.2 
+	})
+	 .to('.text-reveal', {
+	 	clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+	 	y:0,
+	 	stagger: .3,
+	 	duration: 1}, "-=2.9"
+	 	)
+	 .to('.text-reveal',{
+	 	clipPath:'polygon(0 0, 100% 0, 100% 0, 0 0)',
+	 	y:-200,
+	 	duration: .2,
+	 	delay: .5 
+	 })
+	  .to('.text-reveal', {
+	 	clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+	 	y:0,
+	 	stagger: .3,
+	 	duration: .3,
+	 	delay: .5})
+	  .to('.local', {
+	 	clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+	 	y:0,
+	 	stagger: .3,
+	 	opacity: 1,
+	 	duration:1,
+	 	 }, "-=1.4")	
+
+</script>
+</body>
+</html>
